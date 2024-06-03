@@ -1,6 +1,5 @@
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.Comparator;
 
 public class Dream implements Comparable<Dream> {
 
@@ -18,7 +17,7 @@ public class Dream implements Comparable<Dream> {
         return date;
     }
 
-    public boolean isPleasent() {
+    public boolean isPleasant() {
         if(dreamType == Type.NIGHTMARE) {
             return false;
         }
@@ -48,6 +47,6 @@ public class Dream implements Comparable<Dream> {
 
     @Override
     public String toString() {
-        return date.toString() + "\n" + duration + "\n" + dreamType.name() + "\nIs pleasent: " + isPleasent();
+        return date.toString() + "\n" + duration + "\n" + dreamType.name() + "\nIs pleasent: " + isPleasant();
     }
 }
